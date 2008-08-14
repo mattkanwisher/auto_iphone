@@ -4482,3 +4482,47 @@ c2h7AAY6CkB1c2VkewA=--acffbb353c86130c71e329c7df311750d2b34f05
   [4;36;1mEpa Load (0.091113)[0m   [0;1mSELECT * FROM `epas` WHERE (`epas`.`id` = 2095) [0m
 Rendered auto/_search (0.00025)
 Completed in 0.18800 (5 reqs/sec) | Rendering: 0.00119 (0%) | DB: 0.17521 (93%) | 200 OK [http://localhost/auto/search]
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 20:08:02) [GET]
+  Session ID: ab9f975165250a133bc06e1115f11f00
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.119903)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEpa Load (1.220055)[0m   [0mSELECT * FROM `epas` [0m
+  [4;36;1mEpa Columns (0.120201)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendering auto/index
+Completed in 1.58685 (0 reqs/sec) | Rendering: 0.03982 (2%) | DB: 1.46016 (92%) | 200 OK [http://localhost/]
+
+
+Processing AutoController#search (for 127.0.0.1 at 2008-08-13 20:08:13) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"MFR", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"search", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2008", "searchmeters"=>"136242", "locale"=>"en", "model"=>"model"}
+Rendered auto/_failure (0.00003)
+Completed in 0.04299 (23 reqs/sec) | Rendering: 0.03997 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/auto/search]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.086413)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.099533)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.107611)[0m   [0;1mCREATE TABLE `epa` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `class` varchar(255) DEFAULT NULL NULL, `mfr` varchar(255) DEFAULT NULL NULL, `car_line` varchar(255) DEFAULT NULL NULL, `displacement` varchar(255) DEFAULT NULL NULL, `cylnder` varchar(255) DEFAULT NULL NULL, `transmission` varchar(255) DEFAULT NULL NULL, `drive_sys` varchar(255) DEFAULT NULL NULL, `city_mpg` int(11) DEFAULT NULL NULL, `hwy_mpg` int(11) DEFAULT NULL NULL, `comb_mpg` int(11) DEFAULT NULL NULL, `fuel_type` int(11) DEFAULT NULL NULL, `year` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.092567)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.158736)[0m   [0;1mDROP TABLE `epas`[0m
+  [4;35;1mSQL (0.090284)[0m   [0mSHOW KEYS FROM `epa`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.092677)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.088711)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.097602)[0m   [0;1mSHOW FIELDS FROM `epa`[0m
+  [4;35;1mSQL (0.086390)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.106366)[0m   [0;1mSHOW KEYS FROM `epa`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000218)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000478)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.051839)[0m   [0;1mCREATE TABLE `epa` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `class` varchar(255) DEFAULT NULL NULL, `mfr` varchar(255) DEFAULT NULL NULL, `car_line` varchar(255) DEFAULT NULL NULL, `displacement` varchar(255) DEFAULT NULL NULL, `cylnder` varchar(255) DEFAULT NULL NULL, `transmission` varchar(255) DEFAULT NULL NULL, `drive_sys` varchar(255) DEFAULT NULL NULL, `city_mpg` int(11) DEFAULT NULL NULL, `hwy_mpg` int(11) DEFAULT NULL NULL, `comb_mpg` int(11) DEFAULT NULL NULL, `fuel_type` int(11) DEFAULT NULL NULL, `year` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000803)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002157)[0m   [0;1mSHOW KEYS FROM `epa`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000337)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000734)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.003828)[0m   [0;1mCREATE TABLE `epa` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `class` varchar(255) DEFAULT NULL NULL, `mfr` varchar(255) DEFAULT NULL NULL, `car_line` varchar(255) DEFAULT NULL NULL, `displacement` varchar(255) DEFAULT NULL NULL, `cylnder` varchar(255) DEFAULT NULL NULL, `transmission` varchar(255) DEFAULT NULL NULL, `drive_sys` varchar(255) DEFAULT NULL NULL, `city_mpg` int(11) DEFAULT NULL NULL, `hwy_mpg` int(11) DEFAULT NULL NULL, `comb_mpg` int(11) DEFAULT NULL NULL, `fuel_type` varchar(255) DEFAULT NULL NULL, `year` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000832)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001890)[0m   [0;1mSHOW KEYS FROM `epa`[0m

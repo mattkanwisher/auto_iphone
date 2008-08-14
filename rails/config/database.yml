@@ -1,6 +1,6 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
-production:
+development:
   adapter: mysql
   host: localhost
   database: auto
@@ -16,7 +16,7 @@ test:
   password: uPJ87Sr8 
   host: internal-db.s41895.gridserver.com
 
-development:
+production:
     adapter: mysql
     database: db41895_auto
     username: db41895 
