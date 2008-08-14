@@ -132,9 +132,20 @@
 
 
    <tr><th>Year</th>
-   <td colspan="3"><select id="year" name="year">
+   <td colspan="3"><select id="year" name="year" onchange="<%= remote_function(:update => "mfr", :url => { :controller => "auto", :action => :update_mfr}, :with => "Form.serialize($('searchform'))") %>">
+	<option value="" selected>Select a year</option>
+    <option value="2008" >2008</option>
+    <option value="2007" >2007</option>
+    <option value="2006" >2006</option>
+    <option value="2005" >2005</option>
+    <option value="2004" >2004</option>
+    <option value="2003" >2003</option>
+    <option value="2002" >2002</option>
+    <option value="2001" >2001</option>
+    <option value="2000" >2000</option>
+    <option value="1999" >1999</option>
+    <option value="1998" >1998</option>
 
-    <option value="2008" selected>2008</option>
     </select>
 
    </td></tr>
@@ -142,11 +153,7 @@
 
    <tr><th>Manufacturer</th>
    <td colspan="3"><select id="mfr" name="mfr" 	onchange="<%= remote_function(:update => "model", :url => { :controller => "auto", :action => :update_manu}, :with => "Form.serialize($('searchform'))") %>">
-	
-	<option value="MFR" selected>Manufacturer</option>
-	<%  @models.each do  |model| %>
-    <option value="<%=model %>" ><%=model%></option>
-	<% end %>
+	<option value="model" selected>Select a Year first</option>	
     </select>
 
    </td></tr>

@@ -23,17 +23,22 @@ class AutoController < ApplicationController
    
 
    def index 
-     models_tmp = Epa.find(:all)
+   end
+
+   def update_mfr
+     models_tmp = Epa.find(:all, :conditions =>{ :year => params["year"]})
      @models= []
      models_tmp.each do |m|
        @models.push m.mfr
      end 
      @models.uniq!
      @models.sort!
+     
+     render :partial => "mfr"
    end
    
    def update_manu
-     @models = Epa.find(:all, :conditions =>{ :mfr => params["mfr"]})
+     @models = Epa.find(:all, :conditions =>{ :mfr => params["mfr"], :year => params["year"]})
 
      render :partial => "makes"
    end

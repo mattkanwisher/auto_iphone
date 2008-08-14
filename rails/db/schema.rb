@@ -1,7 +1,7 @@
 ActiveRecord::Schema.define do
 
-   create_table :epa do |t|
-     t.string   :class
+   create_table :epas do |t|
+     t.string   :klass
      t.string   :mfr
      t.string   :car_line
      t.string   :displacement

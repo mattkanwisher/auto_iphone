@@ -4532,3 +4532,696 @@ WARNING: You're using the Ruby-based MySQL library that ships with Rails. This l
   [4;36;1mSQL (0.023196)[0m   [0;1mCREATE TABLE `epa` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `class` varchar(255) DEFAULT NULL NULL, `mfr` varchar(255) DEFAULT NULL NULL, `car_line` varchar(255) DEFAULT NULL NULL, `displacement` varchar(255) DEFAULT NULL NULL, `cylnder` varchar(255) DEFAULT NULL NULL, `transmission` varchar(255) DEFAULT NULL NULL, `drive_sys` varchar(255) DEFAULT NULL NULL, `city_mpg` int(11) DEFAULT NULL NULL, `hwy_mpg` int(11) DEFAULT NULL NULL, `comb_mpg` int(11) DEFAULT NULL NULL, `fuel_type` varchar(255) DEFAULT NULL NULL, `year` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
   [4;35;1mSQL (0.000828)[0m   [0mSHOW TABLES[0m
   [4;36;1mSQL (0.002135)[0m   [0;1mSHOW KEYS FROM `epa`[0m
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 21:48:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000322)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEpa Load (0.000000)[0m   [0mMysql::Error: #42S02Table 'auto.epas' doesn't exist: SELECT * FROM `epas` [0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #42S02Table 'auto.epas' doesn't exist: SELECT * FROM `epas`     ):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/mysql_adapter.rb:299:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/mysql_adapter.rb:515:in `select'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:582:in `find_by_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1341:in `find_every'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:536:in `find'
+    /app/controllers/auto_controller.rb:26:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 21:49:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+  [4;36;1mEpa Load (1.739353)[0m   [0;1mSELECT * FROM `epas` [0m
+  [4;35;1mEpa Columns (0.028401)[0m   [0mSHOW FIELDS FROM `epas`[0m
+
+
+NoMethodError (undefined method `generated_methods' for "TWO SEATERS":String):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/attribute_methods.rb:239:in `method_missing'
+    /app/controllers/auto_controller.rb:29:in `index'
+    /app/controllers/auto_controller.rb:28:in `each'
+    /app/controllers/auto_controller.rb:28:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 21:49:24) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+  [4;36;1mEpa Load (2.057637)[0m   [0;1mSELECT * FROM `epas` [0m
+  [4;35;1mEpa Columns (0.004357)[0m   [0mSHOW FIELDS FROM `epas`[0m
+
+
+NoMethodError (undefined method `generated_methods' for "TWO SEATERS":String):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/attribute_methods.rb:239:in `method_missing'
+    /app/controllers/auto_controller.rb:29:in `index'
+    /app/controllers/auto_controller.rb:28:in `each'
+    /app/controllers/auto_controller.rb:28:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000456)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000613)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.248621)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+  [4;35;1mSQL (0.000755)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001986)[0m   [0;1mSHOW KEYS FROM `epas`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000185)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000501)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002711)[0m   [0;1mCREATE TABLE `epas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `class` varchar(255) DEFAULT NULL NULL, `mfr` varchar(255) DEFAULT NULL NULL, `car_line` varchar(255) DEFAULT NULL NULL, `displacement` varchar(255) DEFAULT NULL NULL, `cylnder` varchar(255) DEFAULT NULL NULL, `transmission` varchar(255) DEFAULT NULL NULL, `drive_sys` varchar(255) DEFAULT NULL NULL, `city_mpg` int(11) DEFAULT NULL NULL, `hwy_mpg` int(11) DEFAULT NULL NULL, `comb_mpg` int(11) DEFAULT NULL NULL, `fuel_type` varchar(255) DEFAULT NULL NULL, `year` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000693)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001407)[0m   [0;1mSHOW KEYS FROM `epas`[0m
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 21:54:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000203)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEpa Load (1.836768)[0m   [0mSELECT * FROM `epas` [0m
+  [4;36;1mEpa Columns (0.003976)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+
+
+NoMethodError (undefined method `generated_methods' for "TWO SEATERS":String):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/attribute_methods.rb:239:in `method_missing'
+    /app/controllers/auto_controller.rb:29:in `index'
+    /app/controllers/auto_controller.rb:28:in `each'
+    /app/controllers/auto_controller.rb:28:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 21:54:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000200)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEpa Load (1.751273)[0m   [0mSELECT * FROM `epas` [0m
+  [4;36;1mEpa Columns (0.003849)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+
+
+NoMethodError (undefined method `generated_methods' for "TWO SEATERS":String):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/attribute_methods.rb:239:in `method_missing'
+    /app/controllers/auto_controller.rb:29:in `index'
+    /app/controllers/auto_controller.rb:28:in `each'
+    /app/controllers/auto_controller.rb:28:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEpa Load (1.585088)[0m   [0mSELECT * FROM `epas` [0m
+  [4;36;1mEpa Columns (0.004062)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+  [4;35;1mEpa Load (1.728663)[0m   [0mSELECT * FROM `epas` [0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000186)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000520)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.003333)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+  [4;35;1mSQL (0.327946)[0m   [0mALTER TABLE `epas` ADD `klass` varchar(255) DEFAULT NULL NULL[0m
+  [4;36;1mSQL (0.283754)[0m   [0;1mALTER TABLE `epas` DROP `class`[0m
+  [4;35;1mSQL (0.000764)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002032)[0m   [0;1mSHOW KEYS FROM `epas`[0m
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 22:01:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000225)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEpa Load (1.765798)[0m   [0mSELECT * FROM `epas` [0m
+  [4;36;1mEpa Columns (0.003787)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendering auto/index
+Completed in 2.97572 (0 reqs/sec) | Rendering: 0.01096 (0%) | DB: 1.76981 (59%) | 200 OK [http://localhost/]
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 22:02:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+  [4;35;1mEpa Load (2.072927)[0m   [0mSELECT * FROM `epas` [0m
+  [4;36;1mEpa Columns (0.005527)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendering auto/index
+Completed in 3.16274 (0 reqs/sec) | Rendering: 0.00154 (0%) | DB: 2.07845 (65%) | 200 OK [http://localhost/]
+
+
+Processing AutoController#update_manu (for 127.0.0.1 at 2008-08-13 22:02:17) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"EAGLE", "from"=>"Macon, GA", "searchtime"=>"asd", "action"=>"update_manu", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2008", "searchmeters"=>"asd", "locale"=>"en", "model"=>"model"}
+  [4;35;1mEpa Load (0.035398)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`mfr` = 'EAGLE') [0m
+  [4;36;1mEpa Columns (0.005431)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_makes (0.01015)
+Completed in 0.10101 (9 reqs/sec) | Rendering: 0.05290 (52%) | DB: 0.04083 (40%) | 200 OK [http://localhost/auto/update_manu]
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 22:10:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+Rendering auto/index
+Completed in 0.01287 (77 reqs/sec) | Rendering: 0.01030 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing AutoController#update_mfr (for 127.0.0.1 at 2008-08-13 22:11:01) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"model", "from"=>"Macon, GA", "searchtime"=>"asd", "action"=>"update_mfr", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2007", "searchmeters"=>"asd", "locale"=>"en", "model"=>"model"}
+  [4;35;1mEpa Load (0.128165)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`year` = '2007') [0m
+  [4;36;1mEpa Columns (0.003460)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_mfr (0.00024)
+Completed in 0.33205 (3 reqs/sec) | Rendering: 0.00184 (0%) | DB: 0.13162 (39%) | 200 OK [http://localhost/auto/update_mfr]
+
+
+Processing AutoController#update_manu (for 127.0.0.1 at 2008-08-13 22:11:03) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"INFINITI", "from"=>"Macon, GA", "searchtime"=>"asd", "action"=>"update_manu", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2007", "searchmeters"=>"asd", "locale"=>"en", "model"=>"model"}
+  [4;35;1mEpa Load (0.043457)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`mfr` = 'INFINITI') [0m
+  [4;36;1mEpa Columns (0.003611)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_makes (0.00765)
+Completed in 0.06364 (15 reqs/sec) | Rendering: 0.00490 (7%) | DB: 0.04707 (73%) | 200 OK [http://localhost/auto/update_manu]
+
+
+Processing AutoController#search (for 127.0.0.1 at 2008-08-13 22:11:06) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"INFINITI", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"search", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2007", "searchmeters"=>"136242", "locale"=>"en", "model"=>"34891"}
+  [4;35;1mEpa Columns (0.006431)[0m   [0mSHOW FIELDS FROM `epas`[0m
+  [4;36;1mEpa Load (0.042426)[0m   [0;1mSELECT * FROM `epas` WHERE (`epas`.`id` = 34891) [0m
+Rendered auto/_search (0.00028)
+Completed in 0.08650 (11 reqs/sec) | Rendering: 0.02037 (23%) | DB: 0.04886 (56%) | 200 OK [http://localhost/auto/search]
+
+
+Processing AutoController#update_mfr (for 127.0.0.1 at 2008-08-13 22:11:14) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"INFINITI", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"update_mfr", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"1998", "searchmeters"=>"136242", "locale"=>"en", "model"=>"34891"}
+  [4;35;1mEpa Load (0.094806)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`year` = '1998') [0m
+  [4;36;1mEpa Columns (0.003513)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_mfr (0.00021)
+Completed in 0.15212 (6 reqs/sec) | Rendering: 0.00105 (0%) | DB: 0.09832 (64%) | 200 OK [http://localhost/auto/update_mfr]
+
+
+Processing AutoController#update_manu (for 127.0.0.1 at 2008-08-13 22:11:16) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"INFINITI", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"update_manu", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"1998", "searchmeters"=>"136242", "locale"=>"en", "model"=>"34891"}
+  [4;35;1mEpa Load (0.044389)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`mfr` = 'INFINITI') [0m
+  [4;36;1mEpa Columns (0.003549)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_makes (0.00776)
+Completed in 0.06540 (15 reqs/sec) | Rendering: 0.00507 (7%) | DB: 0.04794 (73%) | 200 OK [http://localhost/auto/update_manu]
+
+
+Processing AutoController#update_manu (for 127.0.0.1 at 2008-08-13 22:11:21) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"update_manu", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"1998", "searchmeters"=>"136242", "locale"=>"en", "model"=>"34097"}
+  [4;35;1mEpa Load (0.054592)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`mfr` = 'NISSAN') [0m
+  [4;36;1mEpa Columns (0.003471)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_makes (0.00986)
+Completed in 0.09094 (10 reqs/sec) | Rendering: 0.00739 (8%) | DB: 0.05806 (63%) | 200 OK [http://localhost/auto/update_manu]
+
+
+Processing AutoController#search (for 127.0.0.1 at 2008-08-13 22:11:25) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"search", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"1998", "searchmeters"=>"136242", "locale"=>"en", "model"=>"33800"}
+  [4;35;1mEpa Columns (0.004032)[0m   [0mSHOW FIELDS FROM `epas`[0m
+  [4;36;1mEpa Load (0.001572)[0m   [0;1mSELECT * FROM `epas` WHERE (`epas`.`id` = 33800) [0m
+Rendered auto/_search (0.00015)
+Completed in 0.01614 (61 reqs/sec) | Rendering: 0.00094 (5%) | DB: 0.00560 (34%) | 200 OK [http://localhost/auto/search]
+
+
+Processing AutoController#search (for 127.0.0.1 at 2008-08-13 22:11:29) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"search", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"1998", "searchmeters"=>"136242", "locale"=>"en", "model"=>"33800"}
+  [4;35;1mEpa Columns (0.004381)[0m   [0mSHOW FIELDS FROM `epas`[0m
+  [4;36;1mEpa Load (0.038648)[0m   [0;1mSELECT * FROM `epas` WHERE (`epas`.`id` = 33800) [0m
+Rendered auto/_search (0.00026)
+Completed in 0.05584 (17 reqs/sec) | Rendering: 0.00158 (2%) | DB: 0.04303 (77%) | 200 OK [http://localhost/auto/search]
+
+
+Processing AutoController#update_mfr (for 127.0.0.1 at 2008-08-13 22:11:33) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"update_mfr", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2004", "searchmeters"=>"136242", "locale"=>"en", "model"=>"33800"}
+  [4;35;1mEpa Load (0.259431)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`year` = '2004') [0m
+  [4;36;1mEpa Columns (0.003476)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_mfr (0.00021)
+Completed in 0.33354 (2 reqs/sec) | Rendering: 0.00128 (0%) | DB: 0.26291 (78%) | 200 OK [http://localhost/auto/update_mfr]
+
+
+Processing AutoController#update_manu (for 127.0.0.1 at 2008-08-13 22:11:37) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"update_manu", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2004", "searchmeters"=>"136242", "locale"=>"en", "model"=>"33800"}
+  [4;35;1mEpa Load (0.053801)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`mfr` = 'NISSAN') [0m
+  [4;36;1mEpa Columns (0.003599)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_makes (0.00995)
+Completed in 0.08997 (11 reqs/sec) | Rendering: 0.00723 (8%) | DB: 0.05740 (63%) | 200 OK [http://localhost/auto/update_manu]
+
+
+Processing AutoController#search (for 127.0.0.1 at 2008-08-13 22:11:42) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"search", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2004", "searchmeters"=>"136242", "locale"=>"en", "model"=>"36816"}
+  [4;35;1mEpa Columns (0.003644)[0m   [0mSHOW FIELDS FROM `epas`[0m
+  [4;36;1mEpa Load (0.038031)[0m   [0;1mSELECT * FROM `epas` WHERE (`epas`.`id` = 36816) [0m
+Rendered auto/_search (0.00018)
+Completed in 0.19658 (5 reqs/sec) | Rendering: 0.00103 (0%) | DB: 0.04168 (21%) | 200 OK [http://localhost/auto/search]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-08-13 22:12:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+
+
+SyntaxError (/nycoding/auto/rails/app/controllers/auto_controller.rb:41: syntax error, unexpected '}', expecting ')'
+     @models = Epa.find(:all, :conditions =>{ :mfr => params["mfr"]}, :year => params["year"]})
+                                                                                              ^):
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:215:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:215:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:214:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:95:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:467:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:479:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/inflector.rb:283:in `constantize'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/string/inflections.rb:143:in `constantize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AutoController#index (for 127.0.0.1 at 2008-08-13 22:12:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"action"=>"index", "controller"=>"auto"}
+Rendering auto/index
+Completed in 0.00358 (279 reqs/sec) | Rendering: 0.00121 (33%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing AutoController#update_mfr (for 127.0.0.1 at 2008-08-13 22:12:21) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"model", "from"=>"Macon, GA", "searchtime"=>"asd", "action"=>"update_mfr", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2004", "searchmeters"=>"asd", "locale"=>"en", "model"=>"model"}
+  [4;35;1mEpa Load (0.115827)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`year` = '2004') [0m
+  [4;36;1mEpa Columns (0.005146)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_mfr (0.00022)
+Completed in 0.33262 (3 reqs/sec) | Rendering: 0.00113 (0%) | DB: 0.12097 (36%) | 200 OK [http://localhost/auto/update_mfr]
+
+
+Processing AutoController#update_manu (for 127.0.0.1 at 2008-08-13 22:12:23) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"AUDI", "from"=>"Macon, GA", "searchtime"=>"asd", "action"=>"update_manu", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2004", "searchmeters"=>"asd", "locale"=>"en", "model"=>"model"}
+  [4;35;1mEpa Load (0.038048)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`mfr` = 'AUDI' AND `epas`.`year` = '2004') [0m
+  [4;36;1mEpa Columns (0.003811)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_makes (0.00742)
+Completed in 0.05491 (18 reqs/sec) | Rendering: 0.00448 (8%) | DB: 0.04186 (76%) | 200 OK [http://localhost/auto/update_manu]
+
+
+Processing AutoController#update_manu (for 127.0.0.1 at 2008-08-13 22:12:27) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"asd", "action"=>"update_manu", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2004", "searchmeters"=>"asd", "locale"=>"en", "model"=>"39054"}
+  [4;35;1mEpa Load (0.039770)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`mfr` = 'NISSAN' AND `epas`.`year` = '2004') [0m
+  [4;36;1mEpa Columns (0.003939)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_makes (0.00741)
+Completed in 0.05700 (17 reqs/sec) | Rendering: 0.00443 (7%) | DB: 0.04371 (76%) | 200 OK [http://localhost/auto/update_manu]
+
+
+Processing AutoController#search (for 127.0.0.1 at 2008-08-13 22:12:30) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"search", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"2004", "searchmeters"=>"136242", "locale"=>"en", "model"=>"39912"}
+  [4;35;1mEpa Columns (0.030793)[0m   [0mSHOW FIELDS FROM `epas`[0m
+  [4;36;1mEpa Load (0.041372)[0m   [0;1mSELECT * FROM `epas` WHERE (`epas`.`id` = 39912) [0m
+Rendered auto/_search (0.00028)
+Completed in 0.08980 (11 reqs/sec) | Rendering: 0.00126 (1%) | DB: 0.07217 (80%) | 200 OK [http://localhost/auto/search]
+
+
+Processing AutoController#update_mfr (for 127.0.0.1 at 2008-08-13 22:12:36) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"update_mfr", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"1998", "searchmeters"=>"136242", "locale"=>"en", "model"=>"39912"}
+  [4;35;1mEpa Load (0.087906)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`year` = '1998') [0m
+  [4;36;1mEpa Columns (0.003930)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_mfr (0.00022)
+Completed in 0.28877 (3 reqs/sec) | Rendering: 0.00118 (0%) | DB: 0.09184 (31%) | 200 OK [http://localhost/auto/update_mfr]
+
+
+Processing AutoController#update_manu (for 127.0.0.1 at 2008-08-13 22:12:39) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"update_manu", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"1998", "searchmeters"=>"136242", "locale"=>"en", "model"=>"39912"}
+  [4;35;1mEpa Load (0.036811)[0m   [0mSELECT * FROM `epas` WHERE (`epas`.`mfr` = 'NISSAN' AND `epas`.`year` = '1998') [0m
+  [4;36;1mEpa Columns (0.003492)[0m   [0;1mSHOW FIELDS FROM `epas`[0m
+Rendered auto/_makes (0.00740)
+Completed in 0.05303 (18 reqs/sec) | Rendering: 0.00488 (9%) | DB: 0.04030 (75%) | 200 OK [http://localhost/auto/update_manu]
+
+
+Processing AutoController#search (for 127.0.0.1 at 2008-08-13 22:12:42) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--435fae4d805333d58bab43868e5576bd869d65b2
+  Parameters: {"submit"=>"Get Price!", "mfr"=>"NISSAN", "from"=>"Macon, GA", "searchtime"=>"5275", "action"=>"search", "to"=>"Atlanta, GA", "controller"=>"auto", "year"=>"1998", "searchmeters"=>"136242", "locale"=>"en", "model"=>"33801"}
+  [4;35;1mEpa Columns (0.003482)[0m   [0mSHOW FIELDS FROM `epas`[0m
+  [4;36;1mEpa Load (0.048181)[0m   [0;1mSELECT * FROM `epas` WHERE (`epas`.`id` = 33801) [0m
+Rendered auto/_search (0.00016)
+Completed in 0.06793 (14 reqs/sec) | Rendering: 0.00105 (1%) | DB: 0.05166 (76%) | 200 OK [http://localhost/auto/search]
